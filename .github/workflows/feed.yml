@@ -25,7 +25,7 @@ jobs:
     env:
       QUESTIONS_PUBLISH: "on"
       QUESTIONS_TRADING: ${{ vars.QUESTIONS_TRADING }}
-      QUESTIONS_TRADING_MAINNET: ${{ vars.QUESTIONS_TRADING_MAINNET }}
+      QUESTIONS_TRADING_MAINNET: ${{ vars.QUESTIONS_TRADING_MAINNET || 'on' }}
       DERIVE_SNAPSHOT_SOURCES: ${{ vars.DERIVE_SNAPSHOT_SOURCES || 'v3_mainnet' }}
       STORE: ${{ github.workspace }}/store
       SITE: ${{ github.workspace }}/site
